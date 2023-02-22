@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# How to run
+# cd $FlyWithLua_REPO
+# ./build-XLinSpeak_lin_OnLinux
+
+rm -r XLinSpeak/lin_x64/*.xpl
+rm -r src/lin.*
+
+# Linux build
+
+cd src
+make
+cp lin.xpl ../XLinSpeak/lin_x64/XLinSpeak.xpl
+make clean
+cd ..
+
+exec $SHELL
+#
+
